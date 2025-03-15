@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>BMI Calculator</title>
+    <style>
+body{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+    background: linear-gradient(45deg, #eceda4, transparent);
+}
+.container {
+width: 350px;
+height:550px;
+background-color: #05f50c12;
+padding: 25px;
+border-radius: 25px;
+margin: 80px auto;
+text-align: center;
+}
+#height,
+#weight {
+  width: 150px;
+  height: 25px;
+  margin-top: 30px;
+}
+
+
+#results {
+  font-size:22px;
+  color:darkgreen;
+  font-weight: 700;
+
+}
+label{color:#67833c;font-size:18px;font-weight: 700;}
+button {
+  width: 150px;
+  height: 35px;
+  text-align: center;
+  background-color:#67833c;
+  border-radius:25px;
+  color: white;
+  text-decoration: none;
+  border: 2px solid darkgreen ;
+  font-size:18px;
+  margin:30px auto;
+}
+input{
+    border: 2px solid #67833c;
+    border-radius: 5px;
+
+}
+h1 {
+  text-align: center;
+  color:darkgreen;
+  
+}
+#weight-guide{color:darkgreen}
+@media(max-width:400px){
+    .container{
+        width:80%;
+    }
+}
+    </style>
+  </head>
+  <body>
+    
+    <div class="container">
+      <h1>BMI Calculator</h1>
+      <form>
+        <p><label>Height in CM: </label><input type="text" id="height" /></p>
+        <p><label>Weight in KG: </label><input type="text" id="weight" /></p>
+        <button>Calculate</button>
+        <div id="results"></div>
+        <div id="weight-guide">
+          <h3>BMI Weight Guide</h3>
+          <p id="one">Under Weight = Less than 18.6</p>
+          <p id="two">Normal Range = 18.6 and 24.9</p>
+          <p id="three">Overweight = Greater than 24.9</p>
+        </div>
+      </form>
+    </div>
+  </body>
+  <script>
+    const form = document.querySelector('form');
+// this usecase will give you empty
+// const height = parseInt(document.querySelector('#height').value)
+
+form.addEventListener('submit', function (e) {
+  e.preventDefault();
+
+  const height = parseInt(document.querySelector('#height').value);
+  const weight = parseInt(document.querySelector('#weight').value);
+  const results = document.querySelector('#results');
+
+  if (height === '' || height < 0 || isNaN(height)) {
+    results.innerHTML = `Please give a valid height ${height}`;
+  } else if (weight === '' || weight < 0 || isNaN(weight)) {
+    results.innerHTML = `Please give a valid weight ${weight}`;
+  } else {
+    const bmi = (weight / ((height * height) / 10000)).toFixed(2);
+    //show the result
+    results.innerHTML = `<span>${bmi}</span>`;
+    if (bmi < 18.6 ) {
+     document.getElementById('one').style.fontWeight=700;
+     document.getElementById('one').style.color="red";
+     
+  }else if (bmi < 24.9 || bmi == 18.6) {
+    document.getElementById('two').style.fontWeight=700;
+    document.getElementById('two').style.color="red";
+  } 
+   else {
+    document.getElementById('three').style.fontWeight=700;
+    document.getElementById('three').style.color="red";
+  }
+  }
+   
+  
+
+//   if(result < 18.6){
+//      document.getElementById('one').style.fontWeight="700";
+//      document.getElementById('one').style.boder="1px solid darkgeen";
+
+//   }elseif(result = 18.6 || result < 24.9){
+//     document.getElementById('two').style.fontWeight="700";
+//      document.getElementById('two').style.boder="1px solid darkgeen";
+//   }
+//   else{
+//     cument.getElementById('two').style.fontWeight=700;
+//      document.getElementById('two').style.boder="1px solid darkgeen";
+//   }
+});
+  </script>
+  <!-- <script src="chaiaurcode.js"></script> -->
+</html>
