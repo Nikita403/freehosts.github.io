@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UTC Counter Clock</title>
+<style>
+    #show_time {
+        width:50%;
+        margin:0 auto;
+        display:flex;
+        justify-content: center;
+        align-items: center;
+    }
+    h2{
+        margin:50px auto;
+        text-align: center;
+        font-size: 60px;
+        color: brown;
+        font-weight: 700;
+    }
+    h3{
+        margin:50px auto;
+    }
+    #show_time span{
+    padding: 30px;
+    background: black;
+    color: white;
+    font-size: 40px;
+    margin: 10px;}
+</style>
+</head>
+<body>
+    <div class="container">
+        <h2>UTC Counter Clock</h2>
+        <div id="show_time">
+          
+            <span id="hh"></span><span id="mm"></span><span id="ss"></span>
+             
+        </div>
+    </div>
+
+<script>
+    setInterval(function () {
+    let date = new Date ();
+   
+    document.getElementById('hh').innerHTML=date.getUTCHours() + " " + "H";
+    document.getElementById('mm').innerHTML=date.getUTCMinutes() + " " + "M";
+    document.getElementById('ss').innerHTML=date.getUTCSeconds() + " " + "S";
+    
+    // let utcdat =date.toLocaleTimeString("en-US", { timeZone: "UTC" });
+    // document.getElementById('show_time').innerHTML = utcdat
+    },1000)
+    
+    
+
+</script>
+</body>
+</html>
