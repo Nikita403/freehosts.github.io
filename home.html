@@ -27,8 +27,9 @@
 .gar_opener h4, .homeandfamily h3{font-size:32px;font-weight: bold;margin-bottom:20px;}
 .gar_opener p, .homeandfamily p{font-size:16px;line-height:20px;margin-bottom:50px;font-weight:500}
 .gar_opener a, .homeandfamily a{background-color: #0a1a9f;color:white;text-align: center;padding:12px 30px;border-radius:25px;text-decoration: none;}
-.gallery {display: flex;flex-wrap: wrap;gap: 20px;margin: 50px auto;align-items: center;justify-content: center;}
-.product{width:155px;}
+.test {display: flex;flex-wrap: wrap;gap: 20px;margin: 50px auto;align-items: stretch;width:100%;}
+.pro {flex: 1 1 calc(33.333% - 20px);text-align: center;padding: 20px;box-sizing: border-box;display: flex;flex-direction: column;justify-content: space-between;}
+.test .pro:first-child {flex: 1 1 calc(66.666% - 20px);
 .pro_title{font-size:20px;margin-bottom:10px;}
 .product a{text-decoration: none;font-weight: 600;}
 .product:first-child {flex: 1 1 calc(66.666% - 20px);}
@@ -49,7 +50,8 @@
     .wd_30{padding:30px 15px;}
     .col-gap{flex-direction:column;row-gap: 30px;}
     .package-del{padding-left:30px;width:80%;}
-
+    .pro {flex: 1 1 calc(50% - 10px);}
+    .test .pro:first-child {flex: 1 1 100%;}
    
     
 }
@@ -109,15 +111,15 @@
             <a href="#" target="_blank">Explore products</a>
         </div>
      </div>
-     <div class="gallery">
+     <div class="test">
         
         
-          <div class="product wd_70">
+          <div class="pro">
             <img src="image/allin1.png" alt="Cameras">
             <h6 class="pro_title">Smart Cameras</h6>
             <a href="#" target="_blank">Explore</a>
           </div>
-          <div class="product">
+          <div class="pro">
             <img src="image/allin2.png" alt="Cameras">
             <h6 class="pro_title">Smart Access</h6>
             <a href="#" target="_blank">Explore</a>
@@ -126,17 +128,17 @@
     
      
         
-          <div class="product">
+          <div class="pro">
             <img src="image/allin3.png" alt="Cameras">
             <h6 class="pro_title">Smart Garage</h6>
             <a href="#" target="_blank">Explore</a>
           </div>
-          <div class="product">
+          <div class="pro">
             <img src="image/allin4.png" alt="Cameras">
             <h6 class="pro_title">Ecosystem Bundles</h6>
             <a href="#" target="_blank">Explore</a>
           </div>
-          <div class="product">
+          <div class="pro">
             <img src="image/allin5.png" alt="Cameras">
             <h6 class="pro_title">Accessories</h6>
             <a href="#" target="_blank">Explore</a>
