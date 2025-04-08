@@ -4,57 +4,105 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>first PDF Design</title>
+    <link>
 <style>
-body{margin:0px;padding:0px;}
-.banner_img, .all_product img, .dflex img, .grid-container img, .d-flex img, .col-gap img{width:100%}
-.wd_80{width:80%;margin:50px auto;}
+  @font-face {
+  font-family: 'Aktiv Grotesk';
+  src: url('fonts/Aktiv-Grotesk-Regular.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+body {
+  font-family: 'Aktiv Grotesk', sans-serif;
+  margin:0px;padding:0px;
+ }
+
+img{width:100%;}
+.main_container_width{max-width: 1366px;margin: 0 auto;}
+.mb_banner{display:none;width:100%;background-image: url(image/myq-hero-banner-mobile.jpg);background-size:cover;height:400px;}
+.desktop_banner{width: 100%;background-image: url(image/myq-hero-banner-desktop.jpg);height: 600px;background-repeat: no-repeat;background-size: cover;position:relative;}
+.banner_content{width:100%;position: absolute;left: 12%;top:18%;max-width:350px;}
+.bundle_btn{background: #fafe57;padding: 8px 15px;text-align: center;color: #0b1d99;font-size: 32px;line-height: 36px;font-weight: 700;}
+.banner_content h1{color:white;font-size:60px;line-height:66px;font-weight:700;margin:15px 0px;padding-bottom:15px;}
+.shop_btn{text-align: center;color: white;text-decoration: none;background-color: #0B1D99;border: 2px solid #0B1D99;padding:12px 50px;border-radius: 30px;font-size: 20px;line-height: 29px;}
+ img, .dflex img, .grid-container img, .d-flex img, .col-gap img{width:100%}
+.wd_80{width:100%;margin:100px auto;max-width:1075px;}
 .product_top{display:flex;justify-content: space-between;}
-.product_top h2, .package-del h2{font-size:36px;margin-top:0px;}
-.product_top p{width:300px;line-height:20px;margin-bottom:40px;font-weight:bold;}
-.product_top a{padding:8px 40px;text-align: center;border:2px solid #0a1a9f;border-radius:25px;color:#0a1a9f;text-decoration: none; }
-.all_product{display: flex;width: 100%;column-gap: 30px;margin: 50px auto;flex-wrap:wrap;}
-.all_product div{width:218px;}
-.pro_title, .product_title{font-size:16px;margin-bottom:10px;font-weight:bold;margin-top:15px;margin-bottom: 10px;}
-.product_price{color:#0a1a9f;font-size:14px;font-weight:bold;margin-bottom:20px;}
-.grid-container {display: grid;grid-template-columns: auto auto auto;gap:20px;width:80%;margin:50px auto;}
+.product_top h2, .package-del h2{font-size:41px;line-height:45px;font-weight:700;margin-top:0px;}
+.product_top p{line-height:20px;margin-bottom:40px;}
+.product_top a{font-size:18px;line-height:26px;padding:12px 50px;text-align: center;border:2px solid #0a1a9f;border-radius:25px;color:#0a1a9f;text-decoration: none;font-weight:700; }
+.all_product{display: flex;width: 100%;column-gap:18px;margin: 50px auto;flex-wrap:wrap;}
+.all_product div{width:200px;}
+.pro_title, .product_title{font-size:27px;line-height:32px;font-weight:600;margin:15px 0px;}
+.product_price{color:#0a1a9f;font-size:18px;font-weight:400;line-height:26px;margin-bottom:20px;text-decoration:none;}
+.grid-container {display: grid;grid-template-columns: auto auto auto;gap:20px;width:100%;max-width:1075px;margin:50px auto;}
 .grid-container a{text-decoration: none;;}
 .item1 {grid-column-start: 1;grid-column-end: 3;}
-.d-flex{display:flex;width:100%;}
+.d-flex{display:flex;width:100%;max-width:1366px;margin:100px auto}
 .d-flex div, .col-gap div{width:50%;}
-.content {padding: 50px 100px;}
-.homeandfamily{background:black;;padding:50px;color:white;display:flex; align-items: center;justify-content: center;}
-.gar_opener h4, .homeandfamily h3{font-size:32px;font-weight: bold;margin-bottom:20px;}
-.gar_opener p, .homeandfamily p{font-size:16px;line-height:20px;margin-bottom:50px;font-weight:500}
-.gar_opener a, .homeandfamily a{background-color: #0a1a9f;color:white;text-align: center;padding:12px 30px;border-radius:25px;text-decoration: none;}
-.package-del{width:400px;}
+.homeandfamily{background:black;color:white;display:flex; align-items: center;justify-content: center;}
+.gar_opener h4, .homeandfamily h3{font-size:41px;line-height:45px;font-weight: bold;margin-bottom:20px;}
+.gar_opener p, .homeandfamily p{font-size:18px;line-height:27px;margin-bottom:40px;font-weight:500}
+.gar_opener a, .homeandfamily a{font-size:18px;background-color: #0a1a9f;color:white;text-align: center;padding:12px 30px;border-radius:25px;text-decoration: none;}
+.package-del{width:600px;}
 .btm-sec{margin-bottom:80px;}
 .col-gap{display:flex;column-gap: 30px;row-gap: 30px;}
 .bg-grey{background:#f2f2f2 !important;color:black !important;}
 @media(min-width:1680px){
-   body{width:100%;max-width:1440px;margin:0 auto;overflow: hidden;}
+  .main_container_width{width:100%;max-width:1440px;margin:0 auto;overflow: hidden;}
+   .banner_content {left:20%;}
 }
-@media(min-width:1200px){
-   .btn-mtop{margin-top:15px;}
+@media(min-width:1000px){
+   .btn-mtop{margin-top:15px;margin-right:20%;}
    .grid-container img{height:400px;}
-   .d-flex, .ht{height:627px;}
-}
+   .heading_width, .product_top p{width:370px;}
+   .ht{height:612px;}
+   .wd_500{width:500px !important}
+   .wd_400{width:400px !important}
+   
+  }
 @media(max-width:767px){
-   .product_top h2, .package-del h2{font-size:24px;}
-   .product_top{flex-direction: column;}
-   .all_product div{width:110px;}
-   .grid-container{grid-template-columns:auto auto;gap:10px;}
+  
+  .bundle_btn{font-size:18px;line-height:27px;}
+  .banner_content h1 {font-size:35px;line-height:40px;}
+  .banner_content{top:40%;left:8%;width:90%;}
+  .mb_banner{height:500px;background-size: contain;background-repeat: no-repeat;}
+  .shop_btn{padding:10px 30px;}
+   .product_top h2, .package-del h2{font-size:24px;line-height:30px;}
+   .product_top{flex-direction: column;padding:0px 20px;}
+   .pro_title, .product_title{font-size:16px;line-height:23px;margin:8px 0px;}
+   .product_price {font-size:14px;line-height:20px;margin-top:0px; }
+   .all_product{justify-content: center;}
+   .all_product div{width:130px;}
+   .grid-container{grid-template-columns:auto auto;gap:10px;width:90%;}
    .grid-container > div img {height:150px;}
    .d-flex, .col-gap{height:auto;flex-direction: column;}
    .d-flex div, .col-gap div{width:100%;}
+   .d-flex{max-width:100%;margin:0px auto;}
    .content {padding:10px}
-   .homeandfamily{padding:30px 0px;}
-   .package-del{width:80%;}
+   .package-del{width:80%;margin:35px auto;}
+   .desktop_banner{display:none;}
+   .mb_banner{display:block;}
+   .main_container_width, .wd_80, .grid-container{max-width:100%;margin:0px auto;}
+   .wd_500, .wd_400{width:100% !important;padding:30px;margin-top:80px;margin-bottom:30px;}
+   p{margin-top:0px;}
+   .mb-ml{margin-left:20px;margin-bottom:50px;}
+   .gar_opener h4, .homeandfamily h3{font-size:24px;line-height:32px}
+   .img_1, .d-flex img{position: relative;width: 90%;display: flex; margin: 0 auto; top:100px;}
+   .col-gap{width:90%;margin:0 auto;}
 }
 </style>
 </head>
 <body>
-    <section class="banner">
-        <div><a href="#"><img src="./image/cbanner.png" alt="Bundles Banner" class="banner_img"></a></div>
+    <section class="main_container_width">
+        <div class="desktop_banner"></div>
+        <div class="mb_banner"></div>
+        <div class="banner_content">
+           <a herf="#" class="bundle_btn">Bundle + Save</a>
+           <h1>Save up to 36% when you Bundle</h1>
+           <a href=""# target="_blank" class="shop_btn">Shop Now </a>
+        </div>
     </section>
     <section class="wd_80">
         <div class="product_top">
@@ -63,43 +111,43 @@ body{margin:0px;padding:0px;}
         </div>
         <div class="all_product">
             <div>
-               <div><img src="image/pro1.png" alt="Garage Control"></div>
+               <div><img src="image/pro1.png" alt="Garage Control" class="img"></div>
                <div>
                   <h4 class="product_title">Garage Control</h4>
                   <p class="product_price">Now $24.99</p>
                </div>
             </div>
             <div>
-              <div><img src="image/pro1.png" alt="Garage Control"></div>
+              <div><img src="image/pro1.png" alt="Garage Control" class="img"></div>
               <div>
                  <h4 class="product_title">Garage Control</h4>
                  <p class="product_price">Now $24.99</p>
               </div>
             </div>
             <div>
-              <div><img src="image/pro2.png" alt="Garage Control"></div>
+              <div><img src="image/pro2.png" alt="Garage Control" class="img"></div>
               <div>
                  <h4 class="product_title">Garage Control</h4>
                  <p class="product_price">Now $24.99</p>
               </div>
             </div>
             <div>
-              <div><img src="image/pro3.png" alt="Garage Control"></div>
+              <div><img src="image/pro3.png" alt="Garage Control" class="img"></div>
               <div>
                  <h4 class="product_title">Garage Control</h4>
                  <p class="product_price">Now $24.99</p>
               </div>
             </div>
             <div>
-              <div><img src="image/pro4.png" alt="Garage Control"></div>
+              <div><img src="image/pro4.png" alt="Garage Control" class="img"></div>
               <div>
                  <h4 class="product_title">Garage Control</h4>
                  <p class="product_price">Now $24.99</p>
               </div>
             </div>
        </div>
-        <div class="product_top">
-         <div><h2>All in one access + monitoring</h2></div>
+        <div class="product_top mb-ml">
+         <div class="heading_width"><h2>All in one access + monitoring</h2></div>
          <div>
              <p>Home and garage control, from anywhere. Trusted by more than 12M users.</p>
              <a href="#" target="_blank">Explore products</a>
@@ -135,9 +183,9 @@ body{margin:0px;padding:0px;}
         </div>
       </div>
       <div class="d-flex">
-          <div><img src="image/homeandfamily.png" alt="Home and Family"></div>
-          <div class="homeandfamily">
-            <div class="content">
+          <div><img src="image/video-monitoring-lg.jpg" alt="Home and Family" class="img_1"></div>
+          <div class="homeandfamily ht">
+            <div class="content wd_500">
                <h3>Stay connected to your home and family, 24/7</h3>
                 <p>Get the most from your camera devices with a Video Monitoring Plan-which iincludes recorded history, Smart detection
                 notification and much more</p>
@@ -153,23 +201,23 @@ body{margin:0px;padding:0px;}
          <div>
            <img src="image/in-vehicle.png" alt="Cameras">
            <h6 class="pro_title">In-vehicle Garage Control</h6>
-           <a href="#" target="_blank">Explore</a>
+           <a href="#" target="_blank" class="product_price">Explore</a>
          </div>
          <div>
            <img src="image/in-garage.png" alt="Cameras">
            <h6 class="pro_title">In Garage Delivery Services</h6>
-           <a href="#" target="_blank">Explore</a>
+           <a href="#" target="_blank" class="product_price">Explore</a>
          </div>
         
       </div>
       </div>
       <div class="d-flex">
-         <div><img src="image/garage-opener.png" alt="Home and Family" class="ht"></div>
+         <div><img src="image/compatibility-lg.jpg" alt="Home and Family" class="ht"></div>
          <div class="homeandfamily bg-grey">
-           <div class="content">
+           <div class="content wd_400">
               <h3>Is your garage opener ready to connect?</h3>
                <p>Use our compatibility tool to see if your garage door opener already has myQ built in.</p>
-               <a href="#" target="_blank" class="explore-btn">Find out</a>
+               <a href="#" target="_blank" class="explore-btn">Find out now</a>
            </div>
          </div>
      </div>
