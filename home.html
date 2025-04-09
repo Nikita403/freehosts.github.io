@@ -50,6 +50,21 @@ img{width:100%;}
 .col-gap{display:flex;column-gap: 30px;row-gap: 30px;}
 
 .bg-grey{background:#f2f2f2 !important;color:black !important;}
+.footer{width:100%;padding:50px;background:black;}
+.footer_container{width:100%;max-width:950px;margin:0 auto;color:white;}
+.footer ul{padding-left:0px;}
+.footer ul li{list-style: none;margin-left:0px;padding:10px 0px;font-size:16px;font-weight:500}
+.footer_nav{display:flex;column-gap:95px;}
+.copyright{display:flex;column-gap: 30px;}
+.btm_secondlast, .social_icon {display:flex;column-gap:10px;flex-wrap:wrap;}
+.footer_nav h5{font-size:16px;line-height:25px;font-weight: 700;text-transform: uppercase;}
+.footer_nav ul li img{width:150px;}
+.bottom_para p, .btm_last{font-size:16px;line-height:23px;font-weight: 600;margin:40px 0px;}
+.btm_last{text-align: center;}
+.btm_secondlast li{padding-top:0px !important;padding-bottom:10px;font-weight: 600;margin-right:15px;}
+.wd_400{width:400px}
+.social_icon li img{width: 25px !important;border: 1px solid white;border-radius: 50px;padding: 5px;}
+.line{width: 100%;height: 2px;margin-bottom: 40px;background: white;}
 @media(min-width:1680px){
   .main_container_width{width:100%;max-width:1440px;margin:0 auto;overflow: hidden;}
    .banner_content {left:20%;}
@@ -72,7 +87,7 @@ img{width:100%;}
   .mb_banner{height:500px;background-size:cover;background-repeat: no-repeat;}
   .shop_btn{padding:10px 30px;}
    .product_top h2, .package-del h2{font-size:24px;line-height:30px;}
-   .product_top{flex-direction: column;padding:20px 20px;}
+   .product_top, .copyright{flex-direction: column;padding:20px 20px;}
    .pro_title, .product_title{font-size:16px;line-height:23px;margin:8px 0px;}
    .product_price {font-size:14px;line-height:20px;margin-top:0px; }
    .all_product{justify-content: center;gap:12px}
@@ -82,8 +97,8 @@ img{width:100%;}
    .grid-container > div img {height:150px;}
    .d-flex, .col-gap{height:auto;flex-direction: column;}
    .d-flex div, .col-gap div{width:100%;}
-   .d-flex{max-width:100%;margin:0px auto;}
-   .content {padding:10px}
+   .d-flex, .footer_container{max-width:100%;margin:0px auto;}
+   .content, .bottom_para p {padding:12px}
    .package-del{width:80%;margin:35px auto;}
    .desktop_banner{display:none;}
    .mb_banner{display:block;}
@@ -94,6 +109,11 @@ img{width:100%;}
    .gar_opener h4, .homeandfamily h3{font-size:24px;line-height:32px}
    .img_1, .d-flex img{position: relative;width: 90%;display: flex; margin: 0 auto; top:100px;}
    .col-gap{width:90%;margin:0 auto;}
+    .wd_400{width:100%;}
+   .footer{padding:0px;}
+   .footer_nav{gap:10px;flex-wrap: wrap;padding: 0px 20px;}
+   .bottom_para{margin-bottom:-50px;}
+   .btm_last{padding-bottom:50px;}
 /*     .ml{margin-left:30px;} */
 }
     @media(max-width:350px){
@@ -236,6 +256,72 @@ img{width:100%;}
          </div>
      </div>
       <div style="padding:50px 0px;background-color: black;"></div>
+    </section>
+     <section class="footer">
+       <div class="footer_container">
+            <div class="line"></div>
+            <div class="footer_nav">
+                <div>
+                   <h5>ABOUT</h5>
+                   <ul class="logos">
+                     <li><img src="https://www.myq.com/medias/chamberlain-logo.svg?context=bWFzdGVyfHJvb3R8MzM2OXxpbWFnZS9zdmcreG1sfGFHTTVMMmhtTVM4NE9UQTBOREUzTURnek5ESXlMbk4yWnd8MTI3NWUwZTVjY2I1OGMzMmM1NDhlYTY2ZGNjZWNmMjNmNTZiOWY1ZTBlYzg3YzZjZDAzODVmYzVlNmFjYTRmZA" class="" alt=""></li>
+                     <li><img src="https://www.myq.com/medias/8819425837086.svg?context=bWFzdGVyfGltYWdlc3wzMjE5fGltYWdlL3N2Zyt4bWx8YVcxaFoyVnpMMmcwWlM5b04ySXZPRGd5TVRNMk9USXdPRGcyTWk1emRtY3w4NTFhNjMwZThiMTMwZTY2ZjIxYzVlYjdmYThmNTc4MjA1ZWE5ODNkNjYxNDAyYTI0MWQxYzk1YzQ5MzlmNDM3" class="" alt=""></li>
+                     <li><img src="https://www.myq.com/medias/8819425869854.svg?context=bWFzdGVyfGltYWdlc3wzOTU3fGltYWdlL3N2Zyt4bWx8YVcxaFoyVnpMMmd4TWk5b09URXZPRGd5TVRNMk9USTBNVFl6TUM1emRtY3xhNmE3ZmJjNGFmNjYzMjRjMmRiM2JiNWUwMmFjNDg4MWY0MzgxMDc2MTdhOWVlNjRlOGRmZmFlNDRlM2YyMmUz" class="" alt=""></li>
+                   </ul>
+                </div>
+                <div>
+                  <h5>DOWNLOAD</h5>
+                  <ul class="dwnld_app">
+                    <li><img src="https://www.myq.com/medias/8819425968158.svg?context=bWFzdGVyfGltYWdlc3wxMDg1MHxpbWFnZS9zdmcreG1sfGFXMWhaMlZ6TDJneE5TOW9ZV1V2T0RneU1UTTJPVEkzTkRNNU9DNXpkbWN8OGU3ZjUzYTU2ODk2YTYxODUxNWQyZTQ2ZTcyNjZiMzFkMjAyOGUwZjdkMzAxZWYwZjBjNzY3MWRjYzE1OWRhZA" class="app" alt=""></li>
+                    <li><img src="https://www.myq.com/medias/8819426000926.png?context=bWFzdGVyfGltYWdlc3wxNjA4N3xpbWFnZS9wbmd8YVcxaFoyVnpMMmhtT0M5b1lXWXZPRGd5TVRNMk9UTXdOekUyTmk1d2JtY3wyZWE2Mjc5YTZjNTQyZDY0NmZmNDMxNGJmNjQ5YjU1MWU2MjY1MTM4ZDA0MTcwOThkMmFmOWNiM2RmY2ViZjk0" class="app" alt=""></li>
+                  </ul>
+                </div>
+                <div>
+                  <h5>QUICK LINKS</h5>
+                  <ul>
+                    <li>myQ App</li>
+                    <li>myQ Subscriptions</li>
+                    <li>Works with myQ</li>
+                    <li>Automotive</li>
+                    <li>Community</li>
+                    <li>Facility</li>
+                    <li>Products</li>
+                  </ul>
+                </div>
+                <div>
+                    <h5>FOLLOW US</h5>
+                    <ul class="social_icon">
+                      <li><img src="https://www.myq.com/medias/8819426099230.svg?context=bWFzdGVyfGltYWdlc3wzNTh8aW1hZ2Uvc3ZnK3htbHxhVzFoWjJWekwyaG1ZUzlvWmpJdk9EZ3lNVE0yT1RNek9Ua3pOQzV6ZG1jfGFjYzdkNDViNzVhNTFhZDYyOWYzYzljOGQwNDM2ZDZjNWU2NWQ4ZTg1OTdiMDk5NTQxODU3YzAzZjIyNmY4Njc" class="social_link" alt="fb"></li>
+                      <li><img src="https://www.myq.com/medias/logo-white.png?context=bWFzdGVyfHJvb3R8MTAzMDE2fGltYWdlL3BuZ3xhREE1TDJnME55ODVNREl6TXpBMk9UVTJPRE13TDJ4dloyOHRkMmhwZEdVdWNHNW58MjM3NzYzNmMwNTc2YTYyZDMzYjM4ZGZlOTkyZjhkMjg1NzM3NGIyOWZmOWMwYzNiYjFhZjg2NmFlYmYzZmI0YQ" class="social_link" alt="fb"></li>
+                      <li><img src="https://www.myq.com/medias/youtube9.svg?context=bWFzdGVyfHJvb3R8ODE5fGltYWdlL3N2Zyt4bWx8YURCbEwyaGpNaTg0T1RBNE1ESTNOekl6T0RBMkxuTjJad3wxOWZjN2JhYTM3YTYzZmQwNzJkMDAyZThiNmQ4NWE5NzE5ZDFmZjkwMTgyNDY0NmY3YTQ5YTQzNzcxMGMyMGU5" class="social_link" alt="fb"></li>
+                      <li><img src="https://www.myq.com/medias/insta-logo.png?context=bWFzdGVyfHJvb3R8NzI4N3xpbWFnZS9wbmd8YUdWbUwyaGxaUzg0T1RVeE5qUTFOakF4T0RJeUxuQnVad3xkOGFjZjIyNmQ1MWYwOTAyMTVhNDE4MDVmNDA4Njk4MDZhMGQyYmZjMGE3MDUxNWE0ZjQ2MDU5YzhlYjk1NmQz" class="social_link" alt="insta-logo.png"></li>
+                      <li><img src="https://www.myq.com/medias/blogger-big-logo-svgrepo-com.png?context=bWFzdGVyfHJvb3R8MjA2OTJ8aW1hZ2UvcG5nfGFEUXpMMmhsWVM4NE9UYzJOVGM1TWpNeE56YzBMMkpzYjJkblpYSXRZbWxuTFd4dloyOHRjM1puY21Wd2J5MWpiMjB1Y0c1bnwwMWI3MGM0NDA3MTQ0YjhiYTllMmFmYzE0YTQ1YTc1ZDQ1ZTkyYWUxNDhhMjA2ODg2MjM4MjNhNzZhZDdkZGI3" class="social_link" alt="blogger-big-logo-svgrepo-com.png"></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="bottom_para">
+              <p>Chamberlain Group, the parent company to myQ, LiftMaster and Chamberlain, is a global leader in intelligent access and Blackstone portfolio company. Powered by our myQ technology, we make access simple and secure for millions of homeowners, businesses, and communities worldwide.</p>
+            </div>
+            <div class="copyright">
+               <div class="wd_400"><p>© 2025&nbsp;The Chamberlain Group LLC</p></div>
+               <div>
+                   <ul class="btm_secondlast">
+                        <li>Contact Us</li>
+                        <li>Press and Media</li>
+                        <li>Privacy Notice</li>
+                        <li>Legal Disclaimer</li>
+                        <li>Terms of Use</li>
+                        <li>Social Terms</li>
+                        <li>Sitemap</li>
+                        <li>Support</li>
+                        
+                  </ul>
+               </div>
+            </div>
+            <div class="btm_last">
+               <p>Your Privacy Choices</p>
+            </div>
+       </div>
     </section>
 </body>
 </html>
